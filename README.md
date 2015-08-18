@@ -23,7 +23,7 @@ If you're using cfx instead ( [upgrade! upgrade!](http://work.erikvold.com/jetpa
     AsyncStorage.open(config, function(e, r) {
       if (e) throw e;
       let item = {_id: 1, string: "Hello world"};
-      AsyncStorage.setItem('key-'+item._id, item, function() {
+      AsyncStorage.setItem('key-'+item._id, item, function(e) {
         if (e) throw e;
         // if you got this far, you probably saved data!
       });
